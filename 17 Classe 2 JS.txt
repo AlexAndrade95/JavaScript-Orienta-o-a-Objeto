@@ -1,0 +1,22 @@
+class Avo {
+    constructor(sobrenome) {
+        this.sobrenome = sobrenome
+    }
+}
+
+class Pai extends Avo { //extends é usado para definir a herança(protótipo)
+    constructor(sobrenome, profissao = 'Professor') {
+        super(sobrenome)
+        this.profissao = profissao
+    }
+}
+
+class Filho extends Pai {
+    constructor() {
+        super('Silva')
+    }
+}
+
+const filho = new Filho
+console.log(filho)
+//Filho { sobrenome: 'Silva', profissao: 'Professor' }
